@@ -10,12 +10,12 @@ For every language, you need to calculate the attributes below 👇:
 ## Solution
 
 Used Spring Boot for the challenge : 
-3 Models : -Repository
-           -Language
-           -GithubApi
-1 controller with the main function : getLanguagesUsedByRepositories
+* 3 Models : - Repository
+           - Language
+           - GithubApi
+* 1 controller with the main function : getLanguagesUsedByRepositories
 
-Jackson for a pretty output
+* Jackson for a pretty output
 
 ## JSON Results
 In DESC order from most used languages
