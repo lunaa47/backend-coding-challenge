@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -49,7 +51,11 @@ public class RepositoryController {
 				}
 			}
 		}
-		return languages;
+		
+		return languages.entrySet()
+                .stream()
+                .sorted((e1, e2) -> e2.getValue().getNumberOfrepositoriesUsingMe().compareTo(e1.getValue().getNumberOfrepositoriesUsingMe()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 	}
 
 	private List<Repository> getRepositories() {
