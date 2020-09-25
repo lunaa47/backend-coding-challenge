@@ -1,13 +1,13 @@
 # backend-coding-challenge
 Challenge for Gemography
 
-##Specs
+## Specs
 Develop a REST microservice that list the languages used by the 100 trending public repos on GitHub.
 For every language, you need to calculate the attributes below 👇:
 Number of repos using this language
 The list of repos using the language
 
-##Solution
+## Solution
 
 Used Spring Boot for the challenge : 
 3 Models : -Repository
@@ -17,7 +17,7 @@ Used Spring Boot for the challenge :
 
 Jackson for a pretty output
 
-##JSON Results
+## JSON Results
 In DESC order from most used languages
 ```json
 "Objective-C" : {
